@@ -1,0 +1,102 @@
+<template>
+ <style>
+  *{
+    word-break:break-all;
+    margin:0;
+  }
+  .colors{
+    float: left;
+    /*width: 300px;*/
+  }
+  .colors>label,.colors>.button{
+    display:inline-block;
+    text-align:center;
+    vertical-align: bottom;
+  }
+  #colors1.colors>label>div{
+    width:26px;
+    height:34px;
+  }
+  #colors2.colors>label>div{
+    width: 33px;
+    height: 27px;
+    padding-top: 6px;
+    box-sizing: border-box;
+    padding-right: 3px;
+  }
+  #colors1.colors .button{
+  }
+  #colors2.colors .button{
+    height:27px;
+    box-sizing: border-box;
+  }
+  #memo{
+    width: 100%;
+    box-sizing: border-box;
+    height: 5em;
+  }
+  #urls{
+    clear:both;
+  }
+  #urls span{
+    font-family:monospace;
+    padding:1px;
+  }
+  #urlHpOn,#urlWebOn,#urlPixivOn,#urlTwitterOn,#urlNicoOn{
+    color:#000;
+    background-color:#AFF;
+  }
+  #urlHpOff,#urlWebOff,#urlPixivOff,#urlTwitterOff,#urlNicoOff{
+    color:#FFF;
+    background-color:#999;
+  }
+  #description{
+    clear: both;
+    background-color:#EEE;
+    border-left  :solid 1px black;
+    border-bottom:solid 1px black;
+  }
+ </style>
+ <div id="time"></div>
+ <div class="colors" id="colors1">
+   <label><div style="background-color:#FF944A;">橙<br><input type="radio" name="color" id="1"></div></label>
+   <label><div style="background-color:#FF00FF;">紫<br><input type="radio" name="color" id="2"></div></label>
+   <label><div style="background-color:#FFF700;">黄<br><input type="radio" name="color" id="3"></div></label>
+   <label><div style="background-color:#00B54A;">緑<br><input type="radio" name="color" id="4"></div></label>
+   <label><div style="background-color:#00B5FF;">水<br><input type="radio" name="color" id="5"></div></label>
+   <label><div style="background-color:#9C529C;">紫<br><input type="radio" name="color" id="6"></div></label>
+   <label><div style="background-color:#0000FF;">青<br><input type="radio" name="color" id="7"></div></label>
+   <label><div style="background-color:#00FF00;">緑<br><input type="radio" name="color" id="8"></div></label>
+   <label><div style="background-color:#FF0000;">赤<br><input type="radio" name="color" id="9"></div></label>
+   <label><div style="background-color:#FFFFFF;">×<br><input type="radio" name="color" id="0" checked></div></label>
+   <button class="button">更<br>新</button>
+ </div>
+ <div class="colors" id="colors2">
+   <label><div style="background-color:#FF944A;"><input type="radio" name="color" id="1">橙</div></label>
+   <label><div style="background-color:#FF00FF;"><input type="radio" name="color" id="2">紫</div></label>
+   <label><div style="background-color:#FFF700;"><input type="radio" name="color" id="3">黄</div></label>
+   <label><div style="background-color:#00B54A;"><input type="radio" name="color" id="4">緑</div></label>
+   <label><div style="background-color:#00B5FF;"><input type="radio" name="color" id="5">水</div></label>
+   <label><div style="background-color:#9C529C;"><input type="radio" name="color" id="6">紫</div></label>
+   <label><div style="background-color:#0000FF;"><input type="radio" name="color" id="7">青</div></label>
+   <label><div style="background-color:#00FF00;"><input type="radio" name="color" id="8">緑</div></label>
+   <label><div style="background-color:#FF0000;"><input type="radio" name="color" id="9">赤</div></label>
+   <label><div style="background-color:#FFFFFF;"><input type="radio" name="color" id="0" checked>×</div></label>
+   <button class="button">更新</button>
+ </div>
+ <div id="urls">
+   <span id="urlHpOn"><a href="">ホームページ</a></span>
+   <span id="urlHpOff">ホームページ</span>
+
+   <span id="urlPixivOn"><a href="">Pixiv</a></span>
+   <span id="urlPixivOff">Pixiv</span>
+
+   <span id="urlTwitterOn"><a href="">Twitter</a></span>
+   <span id="urlTwitterOff">Twitter</span>
+
+   <span id="urlNicoOn"><a href="">ニコニコ</a></span>
+   <span id="urlNicoOff">ニコニコ</span>
+ </div>
+ <div id="description"></div>
+ <textarea id="memo"></textarea>
+</template>

@@ -1,45 +1,23 @@
 {
 	"manifest_version":2,
 	"name":"コミケwebカタログ追加メモ",
-	"description":"",
-	"version": "1.0",
+	"description":"コミケのwebカタログのメモ機能を使いやすくします",
+	"version": "3.0",
 	"icons":{
-		"16":"icon16.png",
-		"48":"icon48.png",
-		"128":"icon128.png"
+		"16":"icon/icon16.png",
+		"48":"icon/icon48.png",
+		"128":"icon/icon128.png"
 	},
 	"content_scripts":[
 		{
-			"matches":["https://webcatalog.circle.ms/*"],
-			"js":["jquery-2.1.1.js","contentScript__base.js"],
-			"run_at":"document_end"
-		},
-		{
-			"matches":["https://webcatalog.circle.ms/CircleRapid/Cut2*"],
-			"js":["contentScript_cut2.js"],
-			"run_at":"document_end"
-		},
-		{
-			"matches":["https://webcatalog.circle.ms/Search/Result*"],
-			"js":["contentScript_search_result.js"],
-			"run_at":"document_end"
-		},
-		/*{
-			"matches":["https://webcatalog.circle.ms/Circle?*"],
-			"exclude_matches":["https://webcatalog.circle.ms/Circle/List*"],
-			"js":["contentScript_circle.js"],
-			"run_at":"document_end"
-		},*/
-		{
-			"matches":["https://webcatalog.circle.ms/Circle/*"],
-			"exclude_matches":["https://webcatalog.circle.ms/Circle/List*"],
-			"js":["contentScript_circle_.js"],
-			"run_at":"document_end"
-		},
-		{
-			"matches":["https://webcatalog.circle.ms/Circle/List*"],
-			"js":["contentScript_circle_list.js"],
-			"run_at":"document_end"
+			"matches":["https://webcatalog.circle.ms/*","https://webcatalog-free.circle.ms/*"],
+			"js":["/loader.js"],
+			"run_at":"document_start"
 		}
+	],
+	"web_accessible_resources":[
+		"/base.js",
+		"/templates/base1.html",
+		"/templates/base1.js"
 	]
 }

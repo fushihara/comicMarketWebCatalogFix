@@ -17,12 +17,6 @@
 	],
 	"web_accessible_resources":[
 		"/base.js",
-		"/templates/circle.html",
-		"/templates/circle.js",
-		"/templates/searchResult.html",
-		"/templates/searchResult.js",
-		"/templates/userFavorite.html",
-		"/templates/userFavorite.js",
 		"/templates/base1.html",
 		"/templates/base1.js"
 	]

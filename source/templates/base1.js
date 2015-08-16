@@ -9,6 +9,7 @@ chromeExtensionW2n.customElements.base1=(function(){
 				var t = tempNode.querySelector("template");
 				var clone = document.importNode(t.content, true);
 				var shadowRoot=this.createShadowRoot();
+				var instance=this;
 				shadowRoot.appendChild(clone);
 				this.doc=shadowRoot;
 				var settingColorsFitWide=true;//色選択部分の横幅を切りつけて使うかどうか
@@ -50,6 +51,14 @@ chromeExtensionW2n.customElements.base1=(function(){
 				};
 				var getDescriptionNode=function(){
 					return shadowRoot.querySelector("#description");
+				};
+				var onMemoNodeKeydown=function(e){
+					if( e.code == "KeyS" && e.ctrlKey == true ){
+						e.preventDefault();
+						e.stopPropagation();
+						instance.onStatusChangeEvent();
+						return false;
+					}
 				};
 				this.setSettingColorsFitWide=function(flag){
 					//最初に現在の選択されている値をチェックして、新しい値で反映させる
@@ -119,6 +128,7 @@ chromeExtensionW2n.customElements.base1=(function(){
 					setLinkStatus("Nico","");
 					getMemoNode().disabled=true;
 					getMemoNode().value="";
+					getMemoNode().addEventListener("keydown",onMemoNodeKeydown);
 					getUpdateButton().disabled=true;
 				};
 				this.setApiResult=function(objectOrNull){

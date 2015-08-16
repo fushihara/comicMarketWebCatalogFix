@@ -22,7 +22,4 @@ function injectTemp(id){
 }
 injectScriptSource("chromeExtension"+globalId+"={customElements:{}};");
 injectTemp("base1");
-//injectTemp("circle");
-//injectTemp("searchResult");
-//injectTemp("userFavorite");
 injectScript("base.js");

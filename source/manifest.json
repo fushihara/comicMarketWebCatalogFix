@@ -1,8 +1,8 @@
 {
 	"manifest_version":2,
 	"name":"コミケwebカタログ追加メモ",
-	"description":"コミケのwebカタログのメモ機能を使いやすくします",
-	"version": "3.0",
+	"description":"",
+	"version": "2.1",
 	"icons":{
 		"16":"icon/icon16.png",
 		"48":"icon/icon48.png",
@@ -17,6 +17,12 @@
 	],
 	"web_accessible_resources":[
 		"/base.js",
+		"/templates/circle.html",
+		"/templates/circle.js",
+		"/templates/searchResult.html",
+		"/templates/searchResult.js",
+		"/templates/userFavorite.html",
+		"/templates/userFavorite.js",
 		"/templates/base1.html",
 		"/templates/base1.js"
 	]
